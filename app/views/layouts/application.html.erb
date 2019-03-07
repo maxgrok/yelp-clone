@@ -7,14 +7,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
 
   <body>
-  <a href="/pages/about">About</a>
-<a href="/pages/contact">Contact</a>
-
-    <%= yield %>
-    <p>Copyright Max Goodman </p>
-
+    <%= render 'layouts/navbar' %>
+      <div class ="container-fluid">
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
   </body>
 </html>
